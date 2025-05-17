@@ -1,0 +1,172 @@
+/* css/habilidades.css - Estilos específicos para la página de habilidades */
+
+
+body {
+    background-image: url('../assets/images/skills_page.jpg'); /* Ajusta la ruta */
+
+}
+
+.habilidades-page {
+    max-width: 1200px;
+    margin: 80px auto 0; /* Ajuste para el header fijo */
+    padding: 40px 20px;
+}
+
+.seccion-principal {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-principal h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-principal h2 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.descripcion-principal {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.categoria-habilidad {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.categoria-habilidad h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.categoria-habilidad h3 i {
+    margin-right: 10px;
+    color: var(--accent-light);
+}
+
+.categoria-habilidad ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.categoria-habilidad ul li {
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding: 8px 0;
+    border-bottom: 1px solid #4a698a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.categoria-habilidad ul li:last-child {
+    border-bottom: none;
+}
+
+.habilidad-nombre {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.ver-mas {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+.ver-mas i {
+    transition: transform 0.3s ease-in-out;
+}
+
+.habilidad-detalles {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4a698a;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.lista-habilidades-blandas {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lista-habilidades-blandas li {
+    color: var(--text-muted);
+    line-height: 1.8;
+    padding: 10px 0;
+    border-bottom: 1px solid #4a698a;
+    display: flex;
+    align-items: center;
+}
+
+.lista-habilidades-blandas li:last-child {
+    border-bottom: none;
+}
+
+.lista-habilidades-blandas li i {
+    margin-right: 15px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+}
+
+.lista-habilidades-blandas li strong {
+    color: var(--secondary-color);
+}
+
+.oculto {
+    display: none;
+}
+
+/* Responsive Design para la página de habilidades */
+@media (max-width: 768px) {
+    .habilidades-page {
+        padding-top: 80px; /* Ajuste para el header fijo */
+    }
+
+    .seccion-principal {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .seccion-principal h2 {
+        font-size: 1.8rem;
+    }
+
+    .lista-habilidades {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .categoria-habilidad h3 {
+        font-size: 1.4rem;
+    }
+
+    .lista-habilidades-blandas li {
+        font-size: 0.95rem;
+    }
+
+    .lista-habilidades-blandas li i {
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+}

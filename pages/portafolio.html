@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Gonzalo Acevedo</title>
+    <link rel="stylesheet" href="../css/stylees.css">
+    <link rel="stylesheet" href="../css/portafolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">thrivagio</div>
+            <ul class="nav-links">
+                <li><a href="../index.html"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="experience.html"><i class="fas fa-briefcase"></i> Experiencia</a></li>
+                <li><a href="skills.html"><i class="fas fa-code"></i> Habilidades</a></li>
+                <li><a href="portafolio.html"><i class="fas fa-folder-open"></i> Portafolio</a></li>
+                <li><a href="about_me.html"><i class="fas fa-user"></i> Sobre Mí</a></li>
+            </ul>
+            <div class="cta-button">
+                <a href="#" class="button primary">¡Hablemos!</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="portafolio-page">
+        <section id="proyectos" class="seccion-principal">
+            <h2><i class="fas fa-folder-open"></i> Mi Portafolio de Proyectos</h2>
+            <p class="descripcion-principal">
+                Aquí encontrarás una selección de los proyectos en los que he trabajado, destacando mis habilidades y la aplicación de mis conocimientos. Haz clic en cada proyecto para ver más detalles.
+            </p>
+            <div class="lista-proyectos">
+                <div class="proyecto-card">
+                    <img src="../assets/images/proyecto1_placeholder.png" alt="Proyecto 1">
+                    <h3>Proyecto 1</h3>
+                    <p class="descripcion-corta">Breve descripción del Proyecto 1.</p>
+                    <button class="ver-detalles" data-target="proyecto1-detalles"><i class="fas fa-eye"></i> Ver Detalles</button>
+                    <div id="proyecto1-detalles" class="detalles-proyecto oculto">
+                        <h4>Proyecto 1</h4>
+                        <p>Descripción detallada del Proyecto 1, incluyendo los desafíos, las soluciones implementadas y las tecnologías utilizadas.</p>
+                        <p><strong>Tecnologías:</strong> [Tecnología 1], [Tecnología 2], ...</p>
+                        <a href="#" target="_blank"><i class="fas fa-link"></i> Ver en vivo (si aplica)</a>
+                        <button class="cerrar-detalles" data-target="proyecto1-detalles"><i class="fas fa-times"></i> Cerrar</button>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="../assets/images/proyecto2_placeholder.png" alt="Proyecto 2">
+                    <h3>Proyecto 2</h3>
+                    <p class="descripcion-corta">Breve descripción del Proyecto 2.</p>
+                    <button class="ver-detalles" data-target="proyecto2-detalles"><i class="fas fa-eye"></i> Ver Detalles</button>
+                    <div id="proyecto2-detalles" class="detalles-proyecto oculto">
+                        <h4>Proyecto 2</h4>
+                        <p>Descripción detallada del Proyecto 2, incluyendo los desafíos, las soluciones implementadas y las tecnologías utilizadas.</p>
+                        <p><strong>Tecnologías:</strong> [Tecnología A], [Tecnología B], ...</p>
+                        <a href="#" target="_blank"><i class="fas fa-link"></i> Ver código (si es público)</a>
+                        <button class="cerrar-detalles" data-target="proyecto2-detalles"><i class="fas fa-times"></i> Cerrar</button>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <img src="../assets/images/proyecto3_placeholder.png" alt="Proyecto 3">
+                    <h3>Proyecto 3</h3>
+                    <p class="descripcion-corta">Breve descripción del Proyecto 3.</p>
+                    <button class="ver-detalles" data-target="proyecto3-detalles"><i class="fas fa-eye"></i> Ver Detalles</button>
+                    <div id="proyecto3-detalles" class="detalles-proyecto oculto">
+                        <h4>Proyecto 3</h4>
+                        <p>Descripción detallada del Proyecto 3, incluyendo los desafíos, las soluciones implementadas y las tecnologías utilizadas.</p>
+                        <p><strong>Tecnologías:</strong> [Tecnología X], [Tecnología Y], ...</p>
+                        <button class="cerrar-detalles" data-target="proyecto3-detalles"><i class="fas fa-times"></i> Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">thrivagio</div>
+            <p>&copy; 2025 Gonzalo Acevedo. Todos los derechos reservados.</p>
+            <ul class="social-links">
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#"><i class="fab fa-github"></i></a></li>
+                </ul>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const botonesVerDetalles = document.querySelectorAll('.ver-detalles');
+            const botonesCerrarDetalles = document.querySelectorAll('.cerrar-detalles');
+            const detallesProyectos = document.querySelectorAll('.detalles-proyecto');
+
+            botonesVerDetalles.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const targetId = this.dataset.target;
+                    const detalles = document.getElementById(targetId);
+                    detalles.classList.remove('oculto');
+                });
+            });
+
+            botonesCerrarDetalles.forEach(boton => {
+                boton.addEventListener('click', function() {
+                    const targetId = this.dataset.target;
+                    const detalles = document.getElementById(targetId);
+                    detalles.classList.add('oculto');
+                });
+            });
+
+            detallesProyectos.forEach(detalles => {
+                detalles.addEventListener('click', function(event) {
+                    if (event.target === this) {
+                        this.classList.add('oculto');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

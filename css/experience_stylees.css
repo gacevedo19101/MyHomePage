@@ -1,0 +1,256 @@
+/* css/experiencia.css - Estilos específicos para la página de experiencia (interactiva) */
+
+body {
+    background-image: url('../assets/images/experience_page.jpg'); /* Ajusta la ruta según la ubicación de este archivo CSS */
+
+}
+
+.experiencia-page {
+    max-width: 1200px;
+    margin: 80px auto 0; /* Ajuste para el header fijo */
+    padding: 40px 20px;
+}
+
+.seccion-principal {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: transparent; /* Fondo transparente */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.seccion-principal h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-principal h2 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.experiencia-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.empresa-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.empresa-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: contain;
+    background-color: var(--secondary-color);
+    padding: 5px;
+}
+
+.empresa-info h3 {
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.experiencia-item .rol {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.experiencia-item .rol i {
+    margin-right: 5px;
+    color: var(--accent-light);
+}
+
+.experiencia-item .periodo {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.experiencia-item .periodo i {
+    margin-right: 5px;
+}
+
+.descripcion-interactiva .descripcion-corta {
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+.descripcion-interactiva .descripcion-corta .leer-mas {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.descripcion-interactiva .descripcion-corta .leer-mas i {
+    margin-left: 5px;
+}
+
+.descripcion-interactiva .descripcion-completa {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.descripcion-interactiva .descripcion-completa .leer-menos {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.descripcion-interactiva .descripcion-completa .leer-menos i {
+    margin-left: 5px;
+}
+
+.experiencia-item .responsabilidades {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 15px;
+}
+
+.experiencia-item .responsabilidades li {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.experiencia-item .responsabilidades li i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+.proyecto-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #34495e;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.proyecto-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.proyecto-imagen {
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    object-fit: cover;
+    background-color: #4a698a; /* Un color de fondo para el placeholder */
+}
+
+.proyecto-info h3 {
+    font-size: 1.7rem;
+    color: var(--secondary-color);
+    margin-bottom: 0;
+}
+
+.proyecto-item .descripcion {
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.proyecto-item .descripcion i {
+    margin-right: 5px;
+    color: var(--accent-light);
+}
+
+.proyecto-item .tecnologias {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.proyecto-item .tecnologias i {
+    margin-right: 5px;
+}
+
+.proyecto-item p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Responsive Design para la página de experiencia (interactiva) */
+@media (max-width: 768px) {
+    .experiencia-page {
+        padding-top: 80px; /* Ajuste para el header fijo */
+    }
+
+    .seccion-principal {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .seccion-principal h2 {
+        font-size: 1.8rem;
+    }
+
+    .experiencia-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .empresa-info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .empresa-logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .empresa-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .proyecto-info {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .proyecto-imagen {
+        width: 60px;
+        height: 60px;
+    }
+
+    .proyecto-info h3 {
+        font-size: 1.5rem;
+    }
+}

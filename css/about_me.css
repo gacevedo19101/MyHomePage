@@ -1,0 +1,137 @@
+/* css/sobre_mi.css - Estilos específicos para la página "Sobre Mí" */
+body {
+    background-image: url('../assets/images/about_me_page.jpg'); /* Ajusta la ruta */
+
+}
+
+.sobre-mi-page {
+    max-width: 1200px;
+    margin: 80px auto 0; /* Ajuste para el header fijo */
+    padding: 40px 20px;
+}
+
+.seccion-principal {
+    margin-bottom: 60px;
+    padding: 30px;
+    background-color: #2c3e50;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.seccion-principal h2 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.seccion-principal h2 i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* Estilos para la sección "Mi Historia" */
+.contenido-sobre-mi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mi-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid var(--accent-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mi-descripcion {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Estilos para la sección "Información de Contacto" */
+.contacto-detalles {
+    color: var(--text-muted);
+    line-height: 1.8;
+}
+
+.contacto-detalles p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contacto-detalles i {
+    margin-right: 15px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    width: 20px; /* Para alinear los iconos */
+    text-align: center;
+}
+
+.contacto-detalles a {
+    color: var(--accent-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto-detalles a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la sección "Formulario de Contacto" */
+.formulario-iframe-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden; /* Para asegurar que el iframe respete el border-radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-iframe-container iframe {
+    border: none;
+}
+
+/* Responsive Design para la página "Sobre Mí" */
+@media (max-width: 768px) {
+    .sobre-mi-page {
+        padding-top: 80px; /* Ajuste para el header fijo */
+    }
+
+    .seccion-principal {
+        padding: 20px;
+        margin-bottom: 40px;
+    }
+
+    .seccion-principal h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenido-sobre-mi {
+        align-items: center;
+    }
+
+    .mi-foto {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 15px;
+    }
+
+    .mi-descripcion {
+        text-align: left;
+    }
+
+    .contacto-detalles {
+        font-size: 0.95rem;
+    }
+
+    .contacto-detalles i {
+        margin-right: 10px;
+        font-size: 1rem;
+    }
+}
